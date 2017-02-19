@@ -1,0 +1,8 @@
+# Style -non scss files
+style/.sass-cache
+style/*.css
+style/*.map
+style/*
+
+#Task Runner
+node_modules
