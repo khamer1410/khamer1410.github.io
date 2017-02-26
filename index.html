@@ -4,15 +4,16 @@
 	<title>Krzysztof Hamerszmit - Portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://use.fontawesome.com/2f399e6845.js"></script>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 
 <body>
 
 	<section class="welcome">
-		<header>
+		<header id="header">
 			<nav>
-				<a href="#"><img src="" class="photo-nav"></a>
+				<a href="#"><img src="" class="photo-nav" alt="logo"></a>
 				<ul>
 					<li><a href="">Start</a></li>
 					<li><a href="">Technologie</a></li>
@@ -21,53 +22,140 @@
 				</ul>
 			</nav>
 		</header>
+		<div class="slogan">
+			<h1>Per aspera ad astra</h1>
+		</div>
+	</section>
+	<section class="about">
+		<div class= "container flex">
+			<div class="col-2 about-description">
+				<h1>O mnie słów kilka</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos velit, non eveniet temporibus asperiores dolores magni sed, modi porro molestiae placeat. Eum illum est nobis modi neque, excepturi molestiae. Fugiat.</p>
+				<button>CV</button>
+
+				<h2>Pasje</h2>
+				<p>Jestem człowiekiem 1000 zainteresowań - jak to u zodiakalnych bliźniaków bywa. Jeżeli jesteś zainteresowany co robię w wolnym czasie zapraszam do sekcji "Pasje"</p>
+				<button>Pasje</button>
+			</div>
+			<figure class="col-1">
+				<img src="img/profile-proto.jpg" class="profile-photo" alt="profile">	
+			</figure>
+		</div>
+		<div class="container flex hobby">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aut voluptatum ipsum doloribus totam accusantium odio delectus quam vero est? Itaque id nobis sit, vero, officia quae porro quas impedit.</p>
+		</div>
 	</section>
 
 	<section id="js-waypoint1" class="tech-group">
 		<section class="tech html">
 			<div class="container">
-				<h1>HTML</h1>
-
+				<h1>Technologie</h1>
+				<h2>HTML</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque perferendis amet, modi ad quia, magni fugiat ipsum, quidem in vitae totam fugit molestias explicabo iste voluptate natus at, ipsam assumenda.</p>
+				<p>HTML5 , semantyka, znaczniki, Sublime (logo z efektem) + Emmmet</p>
 			</div>
 		</section>
 		<div class="section-breaker"></div>
 		<section class="tech css">
 			<div class="container">
-				<h1>CSS</h1>
-				
+				<h2>CSS</h2>
+				<p>Sztuczki magiczki. Uwielbiam hover transition. Buduję złożone elementy, nie tylko prostokąty.</p>
+				<div>
+					<p>kolumna - różne kontenery, kształty (gwiazdki)</p>
+				</div>
+				<div>
+					<p>Zaawansowane stylizacje: buttony</p>
+				</div>
+				<div>
+					<p>Elementy z wykorzystaniem CSS - tooltipy, moduły (gwiazdki z oceną + efekt na wyślij)</p>
+				</div>
+				<div>
+					<p>W pracy pomaga mi Sass - z wykorzystaniem składni SCSS</p>
+				</div>
 			</div>
 		</section>
 		<div class="section-breaker"></div>
 		<section class="tech js">
 			<div class="container">
-				<h1>JS</h1>
-				
+				<h2>JS</h2>
+				<p>Opis JS, życie na stronach, możliwość kreowania i zmiany niczym za dotknięciem magicznej różdżki. Jakiś bajer. karuzela pionowa </p>
+				<div>
+					<p>jQuerry</p>
+				</div>
+				<div>
+					<p>AJAX - suchar o Norisie - pokaż opis, zapostuj na fb/twitterze</p>
+				</div>
 			</div>
 		</section>
 		<div class="section-breaker"></div>
 		<section class="tech other">
 			<div class="container">
-				<h1>Inne</h1>
+				<h2>Inne</h2>
+				<p>GRUNT</p>
+				<p>GIT</p>
 				
 			</div>
 		</section>
 		<div class="section-breaker"></div>
 	</section>
 
-	<section class="portfolio container">
-		<div class="container">
+	<section class="portfolio">
+		<div class="container flex-wrap">
 			<h1>Portfolio</h1>
+			<div>
+				<p>TODO: 3 sekcje obrazy  z widokiem na kod i demo. Podejrzyj u innych i na stornie mieskzania.
+					- AJAX tablica kanban
+					- Projekt mieszkanie
+					- Strona E
+					- Bootstrap
+					- Szablon PSD</p>
+			</div>
+			<div class="row flex-wrap">
+				<div class="col-1 portfolio-ex">
+					<div class="layer">
+						<a href="">1</a>
+						<a href="">2</a>
+					</div>
+					<img src="#">
+				</div>
+				<div class="col-1 portfolio-ex">
+					<div class="layer">
+						<a href=""></a>
+						<a href=""></a>
+					</div>
+					<img src="#" alt="portfolio-2">
+				</div>
+				<div class="col-1 portfolio-ex">
+					<div class="layer">
+						<a href=""></a>
+						<a href=""></a>
+					</div>
+					<img src="#" alt="portfolio-3">
+				</div>
+			</div>
 		</div>		
 	</section>
 
-	<section class="contact container">
+	<section class="contact">
 		<div class="container">
 			<h1>Kontakt</h1>
+			<p>TODO formularz kontaktowy. Podepnij PHP</p>
 		</div>		
 	</section>
 
-	<footer>Hamer 2017</footer>
+	<footer>
+		<div class="container flex">
+			<div class="contact-data">
+				<p>Mail, info?</p>
+			</div>
+			<div class="social">
+				<p>Github, codepen, LinkedIn</p>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			 <p>&copy; Hamer 2017</p>
+		</div>
+	</footer>
 
 <!-- JS SCRIPTS -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
