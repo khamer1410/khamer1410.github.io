@@ -13,12 +13,13 @@
 	<section class="welcome">
 		<header id="header">
 			<nav>
-				<a href="#"><img src="" class="photo-nav" alt="logo"></a>
+				 <!-- TODO: links should show perfect start of each secction (topnavbar fix) --> 
 				<ul>
-					<li><a href="">Start</a></li>
-					<li><a href="">Technologie</a></li>
-					<li><a href="">Portfolio</a></li>
-					<li><a href="">Kontakt</a></li>
+					<li><a href="#"><img src="" class="photo-nav" alt="logo"></a></li>
+					<li><a href="#about">O&nbsp;mnie</a></li>
+					<li><a href="#technologies">Technologie</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Kontakt</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -26,7 +27,7 @@
 			<h1>Per aspera ad astra</h1>
 		</div>
 	</section>
-	<section class="about">
+	<section id="about" class="about">
 		<div class= "container flex">
 			<div class="col-2 about-description">
 				<h1>O mnie słów kilka</h1>
@@ -46,32 +47,40 @@
 		</div>
 	</section>
 
-	<section id="js-waypoint1" class="tech-group">
+	<section id="technologies" class="tech-group">
 		<section class="tech html">
-			<div class="container">
+			<div class="container flex-wrap">
 				<h1>Technologie</h1>
 				<h2>HTML</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque perferendis amet, modi ad quia, magni fugiat ipsum, quidem in vitae totam fugit molestias explicabo iste voluptate natus at, ipsam assumenda.</p>
-				<p>HTML5 , semantyka, znaczniki, Sublime (logo z efektem) + Emmmet</p>
+				<article class="col-2">
+					<p>Tworze strony w HTML5 z wykorzystaniem dostępnych tagów, starając się uzyskać jak najlepszą czytelność kodu strony i uniknąć różnych &lt;divadeł&gt; ;) </p>
+					<p>Tworzę kod przy użyciu Sublime Text 3 z wykorzystaniem narzędzia Emmett</p>
+				</article>
+				<figure class="sublime-logo col-1">
+					<img src="img/sublime logo.png" alt="Sublime logo">
+				</figure>
 			</div>
 		</section>
 		<div class="section-breaker"></div>
 		<section class="tech css">
 			<div class="container">
 				<h2>CSS</h2>
-				<p>Sztuczki magiczki. Uwielbiam hover transition. Buduję złożone elementy, nie tylko prostokąty.</p>
-				<div>
-					<p>kolumna - różne kontenery, kształty (gwiazdki)</p>
-				</div>
-				<div>
-					<p>Zaawansowane stylizacje: buttony</p>
-				</div>
-				<div>
-					<p>Elementy z wykorzystaniem CSS - tooltipy, moduły (gwiazdki z oceną + efekt na wyślij)</p>
-				</div>
-				<div>
-					<p>W pracy pomaga mi Sass - z wykorzystaniem składni SCSS</p>
-				</div>
+				<p>Wykorzystuje CSS3 do stylizacji strony. Staram się tworzyć elementy i animacje w czystym CSS zanim użyję do tego JavaScript. Uwielbiam akcje oparte na hover i transition. Potrafię zbudować złożone elementy, nie tylko prostokąty.</p>
+				<p>W pracy pomaga mi <span class="vip">Sass</span> - z wykorzystaniem składni SCSS</p>
+				<article>
+					<h2>Zaawansowane stylizacje: buttony</h2>
+					<div class="magic-btn">
+						<button class="btn-purple">Click</button>
+						<button class="btn-yellow">Me</button>
+						<button class="btn-blue">Now!</button>
+					</div>
+				</article>			
+				<article>
+					<h2>Elementy z wykorzystaniem czystego CSS - tooltipy, moduły</h2>
+					<div>
+						<p>TODO: kodu.je</p>
+					</div>	
+				</article>
 			</div>
 		</section>
 		<div class="section-breaker"></div>
@@ -90,17 +99,32 @@
 		<div class="section-breaker"></div>
 		<section class="tech other">
 			<div class="container">
-				<h2>Inne</h2>
-				<p>GRUNT</p>
-				<p>GIT</p>
-				
+				<h2>Inne narzędzia</h2>
+				<article class="flex">
+					<figure class="col-1">
+						<img src="" alt="grunt-logo">
+					</figure>
+					<div class="col-2">
+						<h2>GRUNT</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quas incidunt ab cum commodi quis voluptates hic. Dicta iste voluptatibus, quam quae. Autem rerum delectus, debitis dolores officiis non eius.</p>
+					</div>
+				</article>
+				<article class="flex">
+					<figure class="col-1">
+						<img src="" alt="git-logo">
+					</figure>
+					<div class="col-2">
+						<h2>Git</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium labore officiis, accusamus, explicabo quos suscipit debitis magni saepe beatae esse maiores deserunt quam illo. Suscipit iusto, nemo itaque veritatis nesciunt?</p>
+					</div>
+				</article>
 			</div>
 		</section>
 		<div class="section-breaker"></div>
 	</section>
 
-	<section class="portfolio">
-		<div class="container flex-wrap">
+	<section id="portfolio" class="portfolio">
+		<div class="container">
 			<h1>Portfolio</h1>
 			<div>
 				<p>TODO: 3 sekcje obrazy  z widokiem na kod i demo. Podejrzyj u innych i na stornie mieskzania.
@@ -113,42 +137,56 @@
 			<div class="row flex-wrap">
 				<div class="col-1 portfolio-ex">
 					<div class="layer">
-						<a href="">1</a>
-						<a href="">2</a>
+						<a href=""><i class="fa fa-code" aria-hidden="true">Kod</i></a>
+						<a href=""><i class="fa fa-desktop" aria-hidden="true">Demo</i></a>
 					</div>
-					<img src="#">
+					<img src="img/lightbulb.jpg">
 				</div>
 				<div class="col-1 portfolio-ex">
 					<div class="layer">
 						<a href=""></a>
 						<a href=""></a>
 					</div>
-					<img src="#" alt="portfolio-2">
+					<img src="img/lightbulb.jpg" alt="portfolio-2">
 				</div>
 				<div class="col-1 portfolio-ex">
 					<div class="layer">
 						<a href=""></a>
 						<a href=""></a>
 					</div>
-					<img src="#" alt="portfolio-3">
+					<img src="img/lightbulb.jpg" alt="portfolio-3">
 				</div>
+			</div>
+			<div class="flex portfolio-links">
+				<div class="col-2">Github</div>
+				<div class="col-1">Codepen</div>
 			</div>
 		</div>		
 	</section>
-
-	<section class="contact">
+	<div class="section-breaker final-breaker"></div>
+	<section id="contact" class="contact">
 		<div class="container">
 			<h1>Kontakt</h1>
-			<p>TODO formularz kontaktowy. Podepnij PHP</p>
+			<p>Masz pytanie? Chcesz, żebyśmy razem coś stworzyli? Pisz śmiało bezpośrednio na adres poniżej</p>	
+			<form action="">
+				<p>Imię i Nazwisko</p>
+				<input type="text" name=""/>
+				<p>E-mail</p>
+				<input type="email"/>
+				<p>Wiadomość</p>
+				<textarea></textarea>
+				<button type="submit">Wyślij</button>
+			</form>
 		</div>		
 	</section>
-
 	<footer>
 		<div class="container flex">
-			<div class="contact-data">
-				<p>Mail, info?</p>
+			<div class="contact-data col-1">
+				<h3>Napisz!</h3>
+				<p>krzysztof.hamerszmit<span>(at)</span>gmail.com</p>
 			</div>
-			<div class="social">
+			<div class="social col-2">
+				<h3>Znajdź mnie</h3>
 				<p>Github, codepen, LinkedIn</p>
 			</div>
 		</div>

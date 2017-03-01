@@ -2,7 +2,7 @@
 
 //WAYPOINTS
 var waypoint1 = new Waypoint({
-	element: document.getElementById('js-waypoint1'),
+	element: document.getElementById('technologies'),
 	handler: function() {
 		console.log('hej');
 	}
