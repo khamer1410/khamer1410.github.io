@@ -9,7 +9,7 @@ section, .container, .section-breaker {
 
 
 //IMPORT & VARIABLES
-@import url('https://fonts.googleapis.com/css?family=Dosis:200|Roboto:100|Work+Sans:200|Lato:100');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100|Lato:100,300,400');
 @import 'btn';
 
 $container-width: 960px;
@@ -37,7 +37,8 @@ $container-width: 960px;
 
 body {
 	margin: 0 auto;
-	font-family: 'Lato', sans-serif; //TODO fallback font
+	font-family: 'Lato', 'Roboto', sans-serif; 
+	font-weight: 300;
 	overflow-x: hidden;
 }
 
@@ -60,14 +61,20 @@ img {
 	display: block;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 h2 {
 	display: block;
 	width: 100%;
+	font-weight: 400;
 }
 
 h1{
 	@extend h2;
-	font-weight: bold;
+	font-weight: inherit;
 }
 
 h3 {
@@ -77,12 +84,7 @@ h3 {
 span .vip {
 	font-size: 1.1em;
 	color: inherit;
-	font-weight: bold;
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
+	font-weight: inherit;
 }
 
 //GRID
@@ -91,8 +93,13 @@ a {
 }
 
 .flex-wrap {
-	display: flex;
+	@extend .flex;
 	flex-wrap: wrap;
+}
+
+.flex-col {
+	@extend .flex;
+	flex-direction: column;
 }
 
 .col-1 {flex: 1;}
@@ -153,10 +160,28 @@ header{
 	align-self: flex-start;
 }
 
+//SECTION BREAKERS
+.tech-breaker {
+	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover;
+}
+
+.portfolio-breaker {
+	background: url(../img/lightbulb.jpg) 0/cover;
+}
+
+.contact-breaker {
+	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; //TODO img to be replaced
+}
+
+.section-breaker {
+	background-attachment: fixed;
+}
+
+//CUSTOM STYLES
 //WELCOME
 .welcome {
 	height: 100vh;
-	background: url('../img/night sky.jpeg') 0/cover;
+	background: url('../img/night_sky.jpg') 0/cover;
 	position: relative;
 }
 
@@ -194,16 +219,6 @@ header{
 	margin-bottom: 0;
 }
 
-.section-breaker {
-	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover;
-	background-attachment: fixed;
-}
-
-.final-breaker {
-	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; //TODO img to be replaced
-	background-attachment: fixed;
-}
-
 section h1 {
 	display: block;
 	background: $grey;
@@ -216,6 +231,8 @@ section h1 {
 .sublime-logo img {
 	width: 130px;
 }
+
+.other 
 
 //PORTFOLIO
 .portfolio .row {

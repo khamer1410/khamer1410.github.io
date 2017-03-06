@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Dosis:200|Roboto:100|Work+Sans:200|Lato:100");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100|Lato:100,300,400");
 section, .container, .section-breaker {
   min-height: 200px; }
 
@@ -42,7 +42,8 @@ section, .container, .section-breaker {
 
 body {
   margin: 0 auto;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', 'Roboto', sans-serif;
+  font-weight: 300;
   overflow-x: hidden; }
 
 .container {
@@ -61,12 +62,17 @@ img {
   height: auto;
   display: block; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+
 h2, h1 {
   display: block;
-  width: 100%; }
+  width: 100%;
+  font-weight: 400; }
 
 h1 {
-  font-weight: bold; }
+  font-weight: inherit; }
 
 h3 {
   text-align: center; }
@@ -74,18 +80,16 @@ h3 {
 span .vip {
   font-size: 1.1em;
   color: inherit;
-  font-weight: bold; }
+  font-weight: inherit; }
 
-a {
-  color: inherit;
-  text-decoration: none; }
-
-.flex {
+.flex, .flex-wrap, .flex-col {
   display: flex; }
 
 .flex-wrap {
-  display: flex;
   flex-wrap: wrap; }
+
+.flex-col {
+  flex-direction: column; }
 
 .col-1 {
   flex: 1; }
@@ -137,9 +141,21 @@ header {
   height: 60px;
   align-self: flex-start; }
 
+.tech-breaker {
+  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
+
+.portfolio-breaker {
+  background: url(../img/lightbulb.jpg) 0/cover; }
+
+.contact-breaker {
+  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
+
+.section-breaker {
+  background-attachment: fixed; }
+
 .welcome {
   height: 100vh;
-  background: url("../img/night sky.jpeg") 0/cover;
+  background: url("../img/night_sky.jpg") 0/cover;
   position: relative; }
 
 .slogan {
@@ -167,14 +183,6 @@ header {
 .tech h1 {
   margin-bottom: 0; }
 
-.section-breaker {
-  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover;
-  background-attachment: fixed; }
-
-.final-breaker {
-  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover;
-  background-attachment: fixed; }
-
 section h1 {
   display: block;
   background: #D3D0CE;
@@ -186,6 +194,7 @@ section h1 {
 .sublime-logo img {
   width: 130px; }
 
+.other
 .portfolio .row {
   width: 100%; }
 
