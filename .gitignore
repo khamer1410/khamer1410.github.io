@@ -5,3 +5,6 @@ style/*.map
 
 #Task Runner
 node_modules
+
+#other
+img/Thumbs.db

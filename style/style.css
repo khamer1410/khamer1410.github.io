@@ -54,7 +54,7 @@ body {
 
 section {
   background: linear-gradient(-135deg, #D3D0CE, #353133);
-  color: #f0ffff; }
+  color: #f5fcfc; }
 
 img {
   max-width: 100%;
@@ -126,8 +126,8 @@ header {
         color: #D3D0CE;
         list-style-type: none;
         text-transform: uppercase;
-        font-size: 1.5em;
-        letter-spacing: 3px; }
+        font-size: 1.4em;
+        letter-spacing: 4px; }
 
 .header-fixed {
   background-color: green;
@@ -177,7 +177,7 @@ header {
 .tech {
   background: #2E323A;
   background: linear-gradient(to left, #2E323A, #7B4524);
-  color: #f0ffff;
+  color: #f5fcfc;
   overflow: hidden; }
 
 .tech h1 {
@@ -194,7 +194,9 @@ section h1 {
 .sublime-logo img {
   width: 130px; }
 
-.other
+.other article {
+  text-align: center; }
+
 .portfolio .row {
   width: 100%; }
 
@@ -230,10 +232,15 @@ section h1 {
 
 .btn {
   display: block;
-  background: rgba(123, 69, 36, 0.6);
-  padding: 10px;
+  background: rgba(46, 50, 58, 0.44);
+  padding: 5px;
   margin: 15px;
-  border: 0px solid grey; }
+  border: 2px solid rgba(139, 115, 18, 0.89);
+  border-radius: 14px; }
+
+.portfolio-links .fa {
+  font-size: 2em;
+  margin: 5px; }
 
 .contact {
   padding-bottom: 15px; }
@@ -245,7 +252,7 @@ footer {
   position: relative;
   text-align: center;
   background-color: #353133;
-  color: #f0ffff; }
+  color: #f5fcfc; }
 
 footer::before {
   content: "";

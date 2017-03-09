@@ -33,11 +33,11 @@
 			<div class="col-2 about-description">
 				<h1>O mnie słów kilka</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos velit, non eveniet temporibus asperiores dolores magni sed, modi porro molestiae placeat. Eum illum est nobis modi neque, excepturi molestiae. Fugiat.</p>
-				<button>CV</button>
+				<button class="btn">CV</button>
 
 				<h2>Pasje</h2>
 				<p>Jestem człowiekiem 1000 zainteresowań - jak to u zodiakalnych bliźniaków bywa. Jeżeli jesteś zainteresowany co robię w wolnym czasie zapraszam do sekcji "Pasje"</p>
-				<button>Pasje</button>
+				<button class="btn">Pasje</button>
 			</div>
 			<figure class="col-1">
 				<img src="img/profile-proto.jpg" class="profile-photo" alt="profile">	
@@ -54,7 +54,7 @@
 				<h1>Technologie</h1>
 				<h2>HTML</h2>
 				<article class="col-2">
-					<p>Tworze strony w HTML5 z wykorzystaniem dostępnych tagów, starając się uzyskać jak najlepszą czytelność kodu strony i uniknąć różnych &lt;divadeł&gt; ;) </p>
+					<p>Tworze strony w HTML5 z wykorzystaniem dostępnych tagów,<br/> starając się uzyskać jak najlepszą czytelność kodu strony i uniknąć różnych &lt;divadeł&gt; ;) </p>
 					<p>Tworzę kod przy użyciu Sublime Text 3 z wykorzystaniem narzędzia Emmett</p>
 				</article>
 				<figure class="sublime-logo col-1">
@@ -151,7 +151,7 @@
 					<h3>Interaktywny Task-maker</h3>
 					<div class="frame">
 						<div class="layer">
-							<a href=""><i class="fa fa-code" aria-hidden="true">Kod</i></a>
+							<a href="https://github.com/khamer1410/kanban_table"><i class="fa fa-code" aria-hidden="true">Kod</i></a>
 							<a href="https://khamer1410.github.io/kanban_table/"><i class="fa fa-desktop" aria-hidden="true">Demo</i></a>
 						</div>
 						<img src="img/lightbulb.jpg">
@@ -182,8 +182,8 @@
 				</div>
 			</div>
 			<div class="flex portfolio-links">
-				<div class="col-2 "><a href="" class="btn">Github</a></div>
-				<div class="col-1 "><a href="" class="btn">Codepen</a></div>
+				<div class="col-2 "><a href="https://github.com/khamer1410" class="btn"><i class="fa fa-github" aria-hidden="true"></i>Github</a></div>
+				<div class="col-1 "><a href="http://codepen.io/khamer1410/" class="btn"><i class="fa fa-codepen" aria-hidden="true"></i>Codepen</a></div>
 			</div>
 		</div>		
 	</section>
@@ -211,7 +211,15 @@
 			</div>
 			<div class="social col-2">
 				<h3>Znajdź mnie</h3>
-				<p>Github, codepen, LinkedIn</p>
+				<button class="icon-btn github">
+					<i class="fa fa-github"></i>
+				</button>
+				<button class="icon-btn linkedin">
+					<i class="fa fa-linkedin"></i>
+				</button>
+				<button class="icon-btn codepen">
+					<i class="fa fa-codepen"></i>
+				</button>
 			</div>
 		</div>
 		<div class="footer-bottom">
@@ -220,7 +228,10 @@
 	</footer>
 
 <!-- JS SCRIPTS -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
 	<script type="text/javascript" src="script/jquery.waypoints.js"></script>
 	<script type="text/javascript" src="script/script.js"></script>
 </body>
