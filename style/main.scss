@@ -1,3 +1,15 @@
+//DEFAULT
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	outline: none;
+}
+
+
+
 //4WORK ONLY
 * {
 	// border: 1px solid grey;
@@ -59,11 +71,6 @@ img {
 	width: 100%;
 	height: auto;
 	display: block;
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
 }
 
 h2 {
@@ -275,6 +282,7 @@ span .vip {
 	a {
 		display: flex;
 		color: white;
+		
 		i {
 		border: green;
 		padding: 10px;
