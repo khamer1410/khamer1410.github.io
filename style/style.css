@@ -77,10 +77,8 @@ h1 {
 h3 {
   text-align: center; }
 
-span .vip {
-  font-size: 1.1em;
-  color: inherit;
-  font-weight: inherit; }
+.hidden {
+  display: none; }
 
 .flex, .flex-wrap, .flex-col {
   display: flex; }
@@ -162,8 +160,17 @@ header {
   position: absolute;
   left: 20%;
   bottom: 20%;
-  padding: 15px 25px;
-  background-color: rgba(255, 255, 255, 0.2); }
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  text-align: center; }
+  .slogan .countdown {
+    padding: 15px 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 18px 18px 0 0;
+    color: rgba(53, 49, 51, 0.92); }
+    .slogan .countdown h1 {
+      color: #8e44ad;
+      text-transform: uppercase; }
   .slogan h1 {
     background: none;
     color: white; }
@@ -196,6 +203,11 @@ section h1 {
 
 .other article {
   text-align: center; }
+
+span .vip {
+  font-size: 1.1em;
+  color: inherit;
+  font-weight: inherit; }
 
 .portfolio .row {
   width: 100%; }
