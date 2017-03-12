@@ -168,7 +168,11 @@ header {
   bottom: 20%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
-  text-align: center; }
+  text-align: center;
+  transition: 1s; }
+  .slogan h1 {
+    background: none;
+    color: white; }
   .slogan .countdown {
     padding: 15px 25px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -177,9 +181,6 @@ header {
     .slogan .countdown h1 {
       color: #8e44ad;
       text-transform: uppercase; }
-  .slogan h1 {
-    background: none;
-    color: white; }
 
 .profile-photo {
   position: relative; }
@@ -308,6 +309,9 @@ footer div > div {
   background-color: #0c0c0c;
   color: white;
   padding: 10px; }
+
+.big {
+  transform: scale(1.1); }
 
 /* 
 Mobile - ikony zamiast sekcji na jednej klasie - normalnei neiwidcozne

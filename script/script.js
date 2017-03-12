@@ -1,5 +1,17 @@
 'use strict';
 
+const slogan = document.querySelector('.slogan');
+
+function sizeUp() {
+	slogan.classList.add('big');
+}
+function sizeDown() {
+	slogan.classList.remove('big');
+}
+
+slogan.addEventListener ('transitionend', sizeDown);
+setInterval (sizeUp, 3000);
+
 //WAYPOINTS
 var waypoint1 = new Waypoint({
 	element: document.getElementById('technologies'),
