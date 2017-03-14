@@ -12,17 +12,10 @@ button {
 	border: none;
 }
 
-
-
 //4WORK ONLY
-* {
-	// border: 1px solid grey;
-}
-
 section, .container, .section-breaker {
 	min-height: 200px;
 }
-
 
 //IMPORT & VARIABLES
 @import url('https://fonts.googleapis.com/css?family=Roboto:100|Lato:100,300,400');
@@ -35,7 +28,6 @@ $container-width: 960px;
     align-items: center;
 }
 
-
 //COLORS
 	//Palette:
 	$sienna: #7B4524;
@@ -44,7 +36,28 @@ $container-width: 960px;
 	$black: #353133;
 	$grey: #D3D0CE;
 	$grey2: #2E323A;
-	$font1: #f5fcfc; //azure
+	$font1: #ECEBF0; 
+	$bg-color: #0D3448;
+
+//GRID
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	@extend .flex;
+	flex-wrap: wrap;
+}
+
+.flex-col {
+	@extend .flex;
+	flex-direction: column;
+}
+
+.col-1 {flex: 1;}
+.col-2 {flex: 2;}
+.col-3 {flex: 3;}
+.col-4 {flex: 4;}
 
 //GENERAL
 * {
@@ -66,7 +79,7 @@ body {
 }
 
 section {
-	background: linear-gradient(-135deg, $grey, $black);
+	background: $bg-color;
 	color: $font1;
 }
 	
@@ -92,31 +105,49 @@ h3 {
 	text-align: center;
 }
 
-.hidden {
-	display: none;
+main section h1 {
+	font-family: Roboto;
+	font-weight: 600;
+	font-size: 2em;
+	text-align: center;
+	letter-spacing: 10px;
+	position: relative;
+	color: #F7C712;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30%;
+			height: 2px;
+			background: silver;
+			bottom: -10px;
+			right: 50%;
+			transform: translateX(50%);
+			transition: 1s;
+		}
+}	
+
+.txt-center {
+	text-align: center;
 }
 
-//GRID
-.flex {
-	display: flex;
+//SECTION BREAKERS
+.tech-breaker {
+	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover;
 }
 
-.flex-wrap {
-	@extend .flex;
-	flex-wrap: wrap;
+.portfolio-breaker {
+	background: url(../img/lightbulb.jpg) 0/cover;
 }
 
-.flex-col {
-	@extend .flex;
-	flex-direction: column;
+.contact-breaker {
+	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; //TODO img to be replaced
 }
 
-.col-1 {flex: 1;}
-.col-2 {flex: 2;}
-.col-3 {flex: 3;}
-.col-4 {flex: 4;}
+.section-breaker {
+	background-attachment: fixed;
+}
 
-
+//CUSTOM STYLES
 //HEADER
 	//TODO: get default menu styles into external file. Load them with @import.
 header{
@@ -149,6 +180,7 @@ header{
 				text-transform: uppercase;
 				font-size: 1.4em;
 				letter-spacing: 4px;
+
 			}
 		}
 	}
@@ -169,24 +201,6 @@ header{
 	align-self: flex-start;
 }
 
-//SECTION BREAKERS
-.tech-breaker {
-	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover;
-}
-
-.portfolio-breaker {
-	background: url(../img/lightbulb.jpg) 0/cover;
-}
-
-.contact-breaker {
-	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; //TODO img to be replaced
-}
-
-.section-breaker {
-	background-attachment: fixed;
-}
-
-//CUSTOM STYLES
 //WELCOME
 .welcome {
 	height: 100vh;
@@ -199,6 +213,7 @@ header{
 	bottom: 20%;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 18px;
+	font-size: 1.2em;
 	text-align: center;
 	transition: 1s;
 	h1 {
@@ -233,18 +248,10 @@ header{
 	color: $font1;
 	overflow: hidden;
 }
+
 .tech h1 {
 	margin-bottom: 0;
 }
-
-section h1 {
-	display: block;
-	background: $grey;
-	color: black;
-	font-size: 2em;
-	text-align: center;
-	letter-spacing: 11px;
-}	
 
 .sublime-logo img {
 	width: 130px;
@@ -262,7 +269,7 @@ span .vip {
 
 //PORTFOLIO
 .portfolio .row {
-	width: 100%;
+	// width: 100%;
 }
 
 .portfolio-ex {
@@ -271,6 +278,7 @@ span .vip {
 
 .frame {
 	position: relative;
+	overflow: hidden;
 }
 
 .layer	{
@@ -280,8 +288,9 @@ span .vip {
 	opacity: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0, 0.2);
+	background: rgba(0,0,0, 0.5);
 	transition: 0.4s;
+	top: -100%;
 	a {
 		display: flex;
 		color: white;
@@ -294,12 +303,17 @@ span .vip {
 	}	
 }
 
-.layer:hover {
+.portfolio img, .layer {
+	border-radius: 10px;
+}
+
+.frame:hover .layer{
 	opacity: 1;
+	top: 0;
 }
 
 .portfolio-links {
-	text-align: center; // ?? Potrzebne
+	text-align: center; 
 }
 
 .btn {
@@ -335,21 +349,21 @@ footer {
 
 footer::before {
 	content: "";
-	width: 100%;
+	width: 120%;
 	height: 180px;
 	background: $black;
 	position: absolute;
 	top: -45px;
   left: 0;
   right: 0;
-  transform: rotate(-2deg);
+  transform: rotate(-4deg);
 }
 
 .icon-btn {
 	width: 50px;
 	height: 50px;
 	line-height: 50px;
-	margin: 5px;
+	margin: 8px;
 	cursor: pointer;
 	font-size: 40px;
 	.fa {
@@ -374,19 +388,26 @@ footer div > div {
 }
 
 .footer-bottom {
+	position: relative;
 	background-color: #0c0c0c;
 	color: white;
 	padding: 10px;
 }
 
 //FOR JS
-
 .big {
 	transform: scale(1.1);
+}
+
+//MEDIA QUERIES
+@media (max-width: 950px) {
+	.portfolio .flex {
+		display: block;
+	}
+	
 }
 
 //TODO
 /* 
 Mobile - ikony zamiast sekcji na jednej klasie - normalnei neiwidcozne
-
 */

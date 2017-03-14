@@ -47,45 +47,6 @@ section, .container, .section-breaker {
   border-color: #3498db;
   background-image: linear-gradient(135deg, #3498db 50%, transparent 50%); }
 
-* {
-  box-sizing: border-box; }
-
-body {
-  margin: 0 auto;
-  font-family: 'Lato', 'Roboto', sans-serif;
-  font-weight: 300;
-  overflow-x: hidden; }
-
-.container {
-  max-width: 960px;
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden; }
-
-section {
-  background: linear-gradient(-135deg, #D3D0CE, #353133);
-  color: #f5fcfc; }
-
-img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  display: block; }
-
-h2, h1 {
-  display: block;
-  width: 100%;
-  font-weight: 400; }
-
-h1 {
-  font-weight: inherit; }
-
-h3 {
-  text-align: center; }
-
-.hidden {
-  display: none; }
-
 .flex, .flex-wrap, .flex-col {
   display: flex; }
 
@@ -106,6 +67,76 @@ h3 {
 
 .col-4 {
   flex: 4; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  font-family: 'Lato', 'Roboto', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden; }
+
+.container {
+  max-width: 960px;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden; }
+
+section {
+  background: #0D3448;
+  color: #ECEBF0; }
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block; }
+
+h2, h1 {
+  display: block;
+  width: 100%;
+  font-weight: 400; }
+
+h1 {
+  font-weight: inherit; }
+
+h3 {
+  text-align: center; }
+
+main section h1 {
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  letter-spacing: 10px;
+  position: relative;
+  color: #F7C712; }
+  main section h1::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background: silver;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    transition: 1s; }
+
+.txt-center {
+  text-align: center; }
+
+.tech-breaker {
+  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
+
+.portfolio-breaker {
+  background: url(../img/lightbulb.jpg) 0/cover; }
+
+.contact-breaker {
+  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
+
+.section-breaker {
+  background-attachment: fixed; }
 
 header {
   position: fixed;
@@ -145,18 +176,6 @@ header {
   height: 60px;
   align-self: flex-start; }
 
-.tech-breaker {
-  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
-
-.portfolio-breaker {
-  background: url(../img/lightbulb.jpg) 0/cover; }
-
-.contact-breaker {
-  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
-
-.section-breaker {
-  background-attachment: fixed; }
-
 .welcome {
   height: 100vh;
   background: url("../img/night_sky.jpg") 0/cover;
@@ -168,6 +187,7 @@ header {
   bottom: 20%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
+  font-size: 1.2em;
   text-align: center;
   transition: 1s; }
   .slogan h1 {
@@ -191,19 +211,11 @@ header {
 .tech {
   background: #2E323A;
   background: linear-gradient(to left, #2E323A, #7B4524);
-  color: #f5fcfc;
+  color: #ECEBF0;
   overflow: hidden; }
 
 .tech h1 {
   margin-bottom: 0; }
-
-section h1 {
-  display: block;
-  background: #D3D0CE;
-  color: black;
-  font-size: 2em;
-  text-align: center;
-  letter-spacing: 11px; }
 
 .sublime-logo img {
   width: 130px; }
@@ -216,14 +228,12 @@ span .vip {
   color: inherit;
   font-weight: inherit; }
 
-.portfolio .row {
-  width: 100%; }
-
 .portfolio-ex {
   margin: 10px; }
 
 .frame {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .layer {
   position: absolute;
@@ -233,8 +243,9 @@ span .vip {
   opacity: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  transition: 0.4s; }
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+  top: -100%; }
   .layer a {
     display: flex;
     color: white; }
@@ -243,8 +254,12 @@ span .vip {
       padding: 10px;
       border-radius: 15px; }
 
-.layer:hover {
-  opacity: 1; }
+.portfolio img, .layer {
+  border-radius: 10px; }
+
+.frame:hover .layer {
+  opacity: 1;
+  top: 0; }
 
 .portfolio-links {
   text-align: center; }
@@ -271,24 +286,24 @@ footer {
   position: relative;
   text-align: center;
   background-color: #353133;
-  color: #f5fcfc; }
+  color: #ECEBF0; }
 
 footer::before {
   content: "";
-  width: 100%;
+  width: 120%;
   height: 180px;
   background: #353133;
   position: absolute;
   top: -45px;
   left: 0;
   right: 0;
-  transform: rotate(-2deg); }
+  transform: rotate(-4deg); }
 
 .icon-btn {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  margin: 5px;
+  margin: 8px;
   cursor: pointer;
   font-size: 40px; }
   .icon-btn .fa {
@@ -306,6 +321,7 @@ footer div > div {
   z-index: 2; }
 
 .footer-bottom {
+  position: relative;
   background-color: #0c0c0c;
   color: white;
   padding: 10px; }
@@ -313,9 +329,11 @@ footer div > div {
 .big {
   transform: scale(1.1); }
 
+@media (max-width: 950px) {
+  .portfolio .flex, .portfolio .flex-wrap, .portfolio .flex-col {
+    display: block; } }
 /* 
 Mobile - ikony zamiast sekcji na jednej klasie - normalnei neiwidcozne
-
 */
 
 /*# sourceMappingURL=style.css.map */

@@ -12,17 +12,18 @@ function sizeDown() {
 slogan.addEventListener ('transitionend', sizeDown);
 setInterval (sizeUp, 3000);
 
-//WAYPOINTS
-var waypoint1 = new Waypoint({
-	element: document.getElementById('technologies'),
-	handler: function() {
-		console.log('hej');
-	}
-})
 
-document.addEventListener('DOMContentLoaded', ()=> 
-	{ console.log('ready2');
-});
+// //WAYPOINTS
+// var waypoint1 = new Waypoint({
+// 	element: document.getElementById('technologies'),
+// 	handler: function() {
+// 		console.log('hej');
+// 	}
+// })
+
+// document.addEventListener('DOMContentLoaded', ()=> 
+// 	{ console.log('ready2');
+// });
 
 
 //SCROLL
