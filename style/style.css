@@ -126,6 +126,9 @@ main section h1 {
 .txt-center {
   text-align: center; }
 
+.hidden {
+  display: none; }
+
 .tech-breaker {
   background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
 
@@ -163,6 +166,8 @@ header {
         text-transform: uppercase;
         font-size: 1.4em;
         letter-spacing: 4px; }
+        header nav ul li:hover {
+          text-decoration: overline; }
 
 .header-fixed {
   background-color: #8e44ad;
@@ -172,9 +177,7 @@ header {
     justify-content: center; }
 
 .photo-nav {
-  width: 50px;
-  height: 60px;
-  align-self: flex-start; }
+  max-width: 50%; }
 
 .welcome {
   height: 100vh;
@@ -290,7 +293,7 @@ footer {
 
 footer::before {
   content: "";
-  width: 120%;
+  width: 100vw;
   height: 180px;
   background: #353133;
   position: absolute;
@@ -298,6 +301,16 @@ footer::before {
   left: 0;
   right: 0;
   transform: rotate(-4deg); }
+
+.email-btn {
+  background-position: 100% 0;
+  background-size: 300%;
+  background-image: linear-gradient(45deg, #0D3448 50%, transparent 50%);
+  transition: 1s;
+  font-size: 1.1rem; }
+  .email-btn:hover {
+    background-position: 0 100%;
+    color: #F7C712; }
 
 .icon-btn {
   width: 50px;
@@ -327,13 +340,19 @@ footer div > div {
   padding: 10px; }
 
 .big {
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
 @media (max-width: 950px) {
+  .photo-nav {
+    display: none; }
+
   .portfolio .flex, .portfolio .flex-wrap, .portfolio .flex-col {
-    display: block; } }
-/* 
-Mobile - ikony zamiast sekcji na jednej klasie - normalnei neiwidcozne
-*/
+    display: block; }
+
+  footer .flex, footer .flex-wrap, footer .flex-col {
+    flex-direction: column; }
+
+  .layer a {
+    padding: 5% 10%; } }
 
 /*# sourceMappingURL=style.css.map */

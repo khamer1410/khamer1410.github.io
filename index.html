@@ -13,7 +13,7 @@
 			<nav>
 				 <!-- TODO: links should show perfect start of each secction (topnavbar fix) --> 
 				<ul>
-					<li><a href="#"><img src="" class="photo-nav" alt="logo"></a></li>
+					<li><a href="#"><img src="img/kh_logo.png" class="photo-nav" alt="logo"></a></li>
 					<li style="display: none"><a href="#about">O&nbsp;mnie</a></li>
 					<li style="display: none"><a href="#technologies">Technologie</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
@@ -23,7 +23,7 @@
 		</header>
 		<div class="slogan">
 			<div class="countdown">
-				<h1>Full page <br/> Comming soon</h1>
+				<h1>Krzysztof Hamerszmit <br/> Front-end developer</h1>
 				<p>Working hard to give You the best experience</p>
 			</div>
 			<h1>Per aspera ad astra</h1>
@@ -41,8 +41,8 @@
 						<h3>Interaktywny JS Task-maker</h3>
 						<div class="frame">
 							<div class="layer">
-								<a href="https://github.com/khamer1410/kanban_table" target="_blank"><i class="fa fa-code" aria-hidden="true">Kod</i></a>
-								<a href="https://khamer1410.github.io/kanban_table/" target="_blank"><i class="fa fa-desktop" aria-hidden="true">Demo</i></a>
+								<a href="https://github.com/khamer1410/kanban_table" target="_blank" class="btn"><i class="fa fa-code" aria-hidden="true">Kod</i></a>
+								<a href="https://khamer1410.github.io/kanban_table/" target="_blank" class="btn"><i class="fa fa-desktop" aria-hidden="true">Demo</i></a>
 							</div>
 							<img src="img/portf_kanban.jpg">
 						</div>
@@ -52,8 +52,8 @@
 						<h3>Dane krajów - AJAX</h3>
 						<div class="frame">
 							<div class="layer">
-								<a href="https://github.com/khamer1410/AJAX_countrieslist" target="_blank"><i class="fa fa-code" aria-hidden="true">Kod</i></a>
-								<a href="https://khamer1410.github.io/AJAX_countrieslist/" target="_blank"><i class="fa fa-desktop" aria-hidden="true">Demo</i></a>
+								<a href="https://github.com/khamer1410/AJAX_countrieslist" target="_blank" class="btn"><i class="fa fa-code" aria-hidden="true">Kod</i></a>
+								<a href="https://khamer1410.github.io/AJAX_countrieslist/" target="_blank" class="btn"><i class="fa fa-desktop" aria-hidden="true">Demo</i></a>
 							</div>
 							<img src="img/portf_country.jpg">
 						</div>
@@ -63,8 +63,8 @@
 						<h3>Strona RWD</h3>
 						<div class="frame">
 							<div class="layer">
-								<a href="https://github.com/khamer1410/projekt_mieszkanie" target="_blank"><i class="fa fa-code" aria-hidden="true">Kod</i></a>
-								<a href="https://khamer1410.github.io/projekt_mieszkanie/" target="_blank"><i class="fa fa-desktop" aria-hidden="true">Demo</i></a>
+								<a href="https://github.com/khamer1410/projekt_mieszkanie" target="_blank" class="btn"><i class="fa fa-code" aria-hidden="true">Kod</i></a>
+								<a href="https://khamer1410.github.io/projekt_mieszkanie/" target="_blank" class="btn"><i class="fa fa-desktop" aria-hidden="true">Demo</i></a>
 							</div>
 							<img src="img/portf_mieszkanie.jpg">
 						</div>
@@ -95,10 +95,11 @@
 		</section>
 	</main>
 	<footer>
-		<div class="container flex">
+		<div class="container flex flex-wrap">
 			<div class="contact-data col-1">
 				<h3>Napisz!</h3>
-				<div class="btn"> <p>krzysztof.hamerszmit<span>@</span>gmail.com</p></div>
+				<div id="email" class="btn email-btn"> <p>krzysztof.hamerszmit@gmail.com</p></div>
+				<input id="mailholder" class="hidden" value="krzysztof.hamerszmit@gmail.com">
 			</div>
 			<div class="social col-2">
 				<h3>Znajdź mnie</h3>

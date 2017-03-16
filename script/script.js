@@ -1,6 +1,8 @@
 'use strict';
 
 const slogan = document.querySelector('.slogan');
+const emailBtn = document.getElementById('email');
+const emailTxt = document.getElementById('mailholder');
 
 function sizeUp() {
 	slogan.classList.add('big');
@@ -8,12 +10,16 @@ function sizeUp() {
 function sizeDown() {
 	slogan.classList.remove('big');
 }
+function copySelected(idName) {
+	idName.select();
+	document.execCommand('copy');
+}
 
 slogan.addEventListener ('transitionend', sizeDown);
+emailBtn.addEventListener ('click', copySelected(emailTxt));
 setInterval (sizeUp, 3000);
 
-
-// //WAYPOINTS
+// //WAYPOINTS - not used on page yet
 // var waypoint1 = new Waypoint({
 // 	element: document.getElementById('technologies'),
 // 	handler: function() {
