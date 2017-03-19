@@ -1,17 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100|Lato:100,300,400");
-a {
-  color: inherit;
-  text-decoration: none; }
-
-* {
-  outline: none; }
-
-button {
-  border: none; }
-
-section, .container, .section-breaker {
-  min-height: 200px; }
-
 .magic-btn [class^="btn"] {
   display: inline-block;
   margin: 4px 2px;
@@ -46,6 +33,19 @@ section, .container, .section-breaker {
   color: #3498db;
   border-color: #3498db;
   background-image: linear-gradient(135deg, #3498db 50%, transparent 50%); }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+* {
+  outline: none; }
+
+button {
+  border: none; }
+
+section, .container, .section-breaker {
+  min-height: 200px; }
 
 .flex, .flex-wrap, .flex-col {
   display: flex; }
@@ -127,7 +127,7 @@ main section h1 {
   text-align: center; }
 
 .hidden {
-  display: none; }
+  opacity: 0; }
 
 .tech-breaker {
   background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
@@ -187,7 +187,7 @@ header {
 .slogan {
   position: absolute;
   left: 20%;
-  bottom: 20%;
+  top: 40%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
   font-size: 1.2em;
@@ -205,38 +205,15 @@ header {
       color: #8e44ad;
       text-transform: uppercase; }
 
-.profile-photo {
-  position: relative; }
-
-.hobby {
-  display: none; }
-
-.tech {
-  background: #2E323A;
-  background: linear-gradient(to left, #2E323A, #7B4524);
-  color: #ECEBF0;
-  overflow: hidden; }
-
-.tech h1 {
-  margin-bottom: 0; }
-
-.sublime-logo img {
-  width: 130px; }
-
-.other article {
-  text-align: center; }
-
-span .vip {
-  font-size: 1.1em;
-  color: inherit;
-  font-weight: inherit; }
-
 .portfolio-ex {
   margin: 10px; }
 
 .frame {
   position: relative;
   overflow: hidden; }
+  .frame:hover .layer {
+    opacity: 1;
+    top: 0; }
 
 .layer {
   position: absolute;
@@ -259,13 +236,6 @@ span .vip {
 
 .portfolio img, .layer {
   border-radius: 10px; }
-
-.frame:hover .layer {
-  opacity: 1;
-  top: 0; }
-
-.portfolio-links {
-  text-align: center; }
 
 .btn {
   display: block;
@@ -303,14 +273,16 @@ footer::before {
   transform: rotate(-4deg); }
 
 .email-btn {
+  cursor: pointer;
   background-position: 100% 0;
   background-size: 300%;
   background-image: linear-gradient(45deg, #0D3448 50%, transparent 50%);
-  transition: 1s;
+  transition: 0.8s;
   font-size: 1.1rem; }
   .email-btn:hover {
     background-position: 0 100%;
-    color: #F7C712; }
+    color: #F7C712;
+    font-weight: 500; }
 
 .icon-btn {
   width: 50px;
@@ -346,8 +318,8 @@ footer div > div {
   .photo-nav {
     display: none; }
 
-  .portfolio .flex, .portfolio .flex-wrap, .portfolio .flex-col {
-    display: block; }
+  .portfolio-group, .portfolio-links {
+    flex-direction: column; }
 
   footer .flex, footer .flex-wrap, footer .flex-col {
     flex-direction: column; }

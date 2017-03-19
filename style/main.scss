@@ -1,3 +1,14 @@
+//IMPORT & VARIABLES
+@import url('https://fonts.googleapis.com/css?family=Roboto:100|Lato:100,300,400');
+@import 'btn';
+
+$container-width: 960px;
+
+@mixin flex-center {	
+	justify-content: center;
+    align-items: center;
+}
+
 //DEFAULT
 a {
 	color: inherit;
@@ -15,17 +26,6 @@ button {
 //4WORK ONLY
 section, .container, .section-breaker {
 	min-height: 200px;
-}
-
-//IMPORT & VARIABLES
-@import url('https://fonts.googleapis.com/css?family=Roboto:100|Lato:100,300,400');
-@import 'btn';
-
-$container-width: 960px;
-
-@mixin flex-center {	
-	justify-content: center;
-    align-items: center;
 }
 
 //COLORS
@@ -125,14 +125,14 @@ main section h1 {
 			transform: translateX(50%);
 			transition: 1s;
 		}
-}	
+}
 
 .txt-center {
 	text-align: center;
 }
 
 .hidden {
-	display: none;
+	opacity: 0;
 }
 //TODO: Tooltip after clicking on eventListener
 // .tooltip {
@@ -221,7 +221,7 @@ header{
 .slogan {
 	position: absolute;
 	left: 20%;
-	bottom: 20%;
+	top: 40%;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 18px;
 	font-size: 1.2em;
@@ -243,46 +243,7 @@ header{
 	}
 }
 
-//ABOUT
-.profile-photo {
-	position: relative;
-}
-
-.hobby {
-	display: none;
-}
-
-//TECH
-.tech {
-	background: $grey2;
-	background: linear-gradient( to left, $grey2, $sienna);
-	color: $font1;
-	overflow: hidden;
-}
-
-.tech h1 {
-	margin-bottom: 0;
-}
-
-.sublime-logo img {
-	width: 130px;
-}
-
-.other article {
-	text-align: center;
-}
-
-span .vip {
-	font-size: 1.1em;
-	color: inherit;
-	font-weight: inherit;
-}
-
 //PORTFOLIO
-.portfolio .row {
-	// width: 100%;
-}
-
 .portfolio-ex {
 	margin: 10px;
 }
@@ -290,6 +251,10 @@ span .vip {
 .frame {
 	position: relative;
 	overflow: hidden;
+	&:hover .layer {
+		opacity: 1;
+		top: 0;
+	}
 }
 
 .layer	{
@@ -316,15 +281,6 @@ span .vip {
 
 .portfolio img, .layer {
 	border-radius: 10px;
-}
-
-.frame:hover .layer{
-	opacity: 1;
-	top: 0;
-}
-
-.portfolio-links {
-	text-align: center; 
 }
 
 .btn {
@@ -371,16 +327,16 @@ footer::before {
 }
 
 .email-btn {
-	// cursor: pointer; TODO: turn on after putting tooltip after click.
+	cursor: pointer;
 	background-position: 100% 0;
 	background-size: 300%;
 	background-image: linear-gradient(45deg, $bg-color 50%, transparent 50%);
-	transition: 1s;
+	transition: 0.8s;
 	font-size: 1.1rem;
-
 	&:hover {
 		background-position: 0 100%;
 		color: $header-color;
+		font-weight: 500;
 	}
 }
 
@@ -430,8 +386,8 @@ footer div > div {
 		display: none;
 	}
 
-	.portfolio .flex {
-		display: block;
+	.portfolio-group, .portfolio-links {
+		flex-direction: column;
 	}
 	
 	footer .flex {

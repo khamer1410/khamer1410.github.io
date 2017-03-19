@@ -2,7 +2,7 @@
 
 const slogan = document.querySelector('.slogan');
 const emailBtn = document.getElementById('email');
-const emailTxt = document.getElementById('mailholder');
+const emailHolder = document.getElementById('mailholder');
 
 function sizeUp() {
 	slogan.classList.add('big');
@@ -11,12 +11,12 @@ function sizeDown() {
 	slogan.classList.remove('big');
 }
 function copySelected(idName) {
-	idName.select();
+	emailHolder.select();
 	document.execCommand('copy');
 }
 
 slogan.addEventListener ('transitionend', sizeDown);
-emailBtn.addEventListener ('click', copySelected(emailTxt));
+emailBtn.addEventListener ('click', copySelected);
 setInterval (sizeUp, 3000);
 
 // //WAYPOINTS - not used on page yet
@@ -33,7 +33,7 @@ setInterval (sizeUp, 3000);
 
 
 //SCROLL
-window.onscroll = function() {scrollFunction()};
+window.onscroll = ()=> {scrollFunction()};
 
 function scrollFunction() {
 	let header = document.getElementById("header");
