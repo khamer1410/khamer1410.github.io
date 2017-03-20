@@ -4,6 +4,7 @@
 	<title>Krzysztof Hamerszmit - Portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--TODO favicon-->
 	<script src="https://use.fontawesome.com/2f399e6845.js"></script>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
@@ -12,17 +13,18 @@
 		<header id="header">
 			<nav>
 				 <!-- TODO: links should show perfect start of each secction (topnavbar fix) --> 
+				 <!--TODO: nav hover - add letter spacing-->
 				<ul>
 					<li><a href="#"><img src="img/kh_logo.png" class="photo-nav" alt="logo"></a></li>
-					<li style="display: none"><a href="#about">O&nbsp;mnie</a></li>
+					<li><a href="#about"><i class="fa fa-user-o" aria-hidden="true"></i><span class="nav-item">O&nbsp;mnie</span></a></li>
 					<li style="display: none"><a href="#technologies">Technologie</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Kontakt</a></li>
+					<li><a href="#portfolio"><i class="fa fa-code" aria-hidden="true"></i><span class="nav-item">Portfolio</span></a></li>
+					<li><a href="#contact"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="nav-item">Kontakt</span></a></li>
 				</ul>
 			</nav>
 		</header>
 		<div class="slogan">
-			<div class="countdown">
+			<div class="title">
 				<h1>Krzysztof Hamerszmit <br/> Front-end developer</h1>
 				<p>Working hard to give You the best experience</p>
 			</div>
@@ -30,6 +32,15 @@
 		</div>
 	</section>
 	<main>
+		<section id="about" class="about">
+			<div class="container">
+				<h1>O&nbsp;Mnie</h1>
+				<div>
+					<p>Nazywam się Krzysztof Hamerszmit i intensywnie ucze się web developmentu.<br> Uwielbiam tworzyć narzędzia, które usprawniają i porządkują pracę. Chcę rozwijać moje umiejętności w JavaScript, aby swobodnie tworzyć aplikacje webowe z wykorzystaniem Angular/React. Jestem otwarty także na back-end: praca na bazach danych towarzyszy mi od studiów po obecną pracę.</p>
+				</div>
+			</div>
+		</section>
+		<div class="section-breaker tech-breaker"></div>
 		<section id="portfolio" class="portfolio">
 			<div class="container">
 				<h1>Portfolio</h1>
@@ -72,8 +83,8 @@
 					</div>
 				</div>
 				<div class="portfolio-links flex txt-center">
-					<div class="col-2 "><a href="https://github.com/khamer1410" class="btn"><i class="fa fa-github" aria-hidden="true"></i>Github</a></div>
-					<div class="col-1 "><a href="http://codepen.io/khamer1410/" class="btn"><i class="fa fa-codepen" aria-hidden="true"></i>Codepen</a></div>
+					<div class="col-2 "><a href="https://github.com/khamer1410" target="_blank" class="btn"><i class="fa fa-github" aria-hidden="true"></i>Github</a></div>
+					<div class="col-1 "><a href="http://codepen.io/khamer1410/" target="_blank" class="btn"><i class="fa fa-codepen" aria-hidden="true"></i>Codepen</a></div>
 				</div>
 			</div>
 		</section>

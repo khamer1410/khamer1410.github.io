@@ -11,6 +11,7 @@ function sizeDown() {
 	slogan.classList.remove('big');
 }
 function copySelected(idName) {
+    console.log(this);
 	emailHolder.select();
 	document.execCommand('copy');
 }
@@ -18,6 +19,20 @@ function copySelected(idName) {
 slogan.addEventListener ('transitionend', sizeDown);
 emailBtn.addEventListener ('click', copySelected);
 setInterval (sizeUp, 3000);
+
+
+//SCROLL
+window.onscroll = ()=> {scrollFunction()};
+
+function scrollFunction() {
+	let header = document.getElementById("header");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        header.classList.add("header-fixed");
+    } else {
+        header.classList.remove("header-fixed");
+    }
+}
+
 
 // //WAYPOINTS - not used on page yet
 // var waypoint1 = new Waypoint({
@@ -32,14 +47,3 @@ setInterval (sizeUp, 3000);
 // });
 
 
-//SCROLL
-window.onscroll = ()=> {scrollFunction()};
-
-function scrollFunction() {
-	let header = document.getElementById("header");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        header.classList.add("header-fixed");
-    } else {
-        header.classList.remove("header-fixed");
-    }
-}

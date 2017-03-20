@@ -1,6 +1,6 @@
 //IMPORT & VARIABLES
-@import url('https://fonts.googleapis.com/css?family=Roboto:100|Lato:100,300,400');
-@import 'btn';
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400|Roboto:100');
+// @import 'btn';
 
 $container-width: 960px;
 
@@ -34,6 +34,7 @@ section, .container, .section-breaker {
 	$wood: #D49F6C;
 	$rosy-brown: #A3785A;
 	$black: #353133;
+	$half-black: rgba(0, 0, 0, 0.5);
 	$grey: #D3D0CE;
 	$grey2: #2E323A;
 	$font1: #ECEBF0; 
@@ -70,6 +71,7 @@ body {
 	font-family: 'Lato', 'Roboto', sans-serif; 
 	font-weight: 300;
 	overflow-x: hidden;
+	font-size: 16px;
 }
 
 .container {
@@ -102,14 +104,11 @@ h1{
 	font-weight: inherit;
 }
 
-h3 {
-	text-align: center;
-}
-
 main section h1 {
 	font-family: Roboto;
 	font-weight: 600;
 	font-size: 2em;
+	padding: 20px 0;
 	text-align: center;
 	letter-spacing: 10px;
 	position: relative;
@@ -120,7 +119,7 @@ main section h1 {
 			width: 30%;
 			height: 2px;
 			background: silver;
-			bottom: -10px;
+			bottom: 0;
 			right: 50%;
 			transform: translateX(50%);
 			transition: 1s;
@@ -135,11 +134,6 @@ main section h1 {
 	opacity: 0;
 }
 //TODO: Tooltip after clicking on eventListener
-// .tooltip {
-// 	&:after {
-// 		content: "HEJ";
-// 	}
-// }
 //SECTION BREAKERS
 .tech-breaker {
 	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover;
@@ -147,10 +141,6 @@ main section h1 {
 
 .portfolio-breaker {
 	background: url(../img/lightbulb.jpg) 0/cover;
-}
-
-.contact-breaker {
-	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; //TODO img to be replaced
 }
 
 .section-breaker {
@@ -165,11 +155,8 @@ header{
 	z-index: 100;
 	width: 100%;
 	padding: 5px 0;
-
 	background: #222222; //fallback color
 	background: linear-gradient(45deg, transparent , #222222, $black);
-
-	transition: 1s;
 
 	nav {
 		display: flex;
@@ -189,11 +176,15 @@ header{
 				list-style-type: none;
 				text-transform: uppercase;
 				font-size: 1.4em;
-				letter-spacing: 4px;
+				letter-spacing: 2px;
+				transition: 1s;
 				&:hover {
 					text-decoration: overline;
+					letter-spacing: 4px;
+					color: $header-color;
+					
+					// text-shadow: 0 2 2 2
 				}
-
 			}
 		}
 	}
@@ -205,11 +196,16 @@ header{
 	font-size: 0.8em;
 	nav {
 		justify-content: center;
+		li {
+			padding: 5px 15px;
+		}
 	}
 }
 
 .photo-nav {
-	max-width: 50%;
+	width: 150px;
+    min-height: 40px;
+	max-width: initial;
 }
 
 //WELCOME
@@ -220,8 +216,8 @@ header{
 }
 .slogan {
 	position: absolute;
-	left: 20%;
-	top: 40%;
+	left: 15%;
+	top: 30%;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 18px;
 	font-size: 1.2em;
@@ -231,7 +227,7 @@ header{
 		background: none;
 		color: white;
 	}
-	.countdown {
+	.title {
 		padding: 15px 25px;
 		background-color: rgba(255, 255, 255, 0.5);
 		border-radius: 18px 18px 0 0;
@@ -284,17 +280,33 @@ header{
 }
 
 .btn {
-  display: block;
-  background: rgba(46, 50, 58, 0.44);
-  padding: 5px;
-  margin: 15px;
-  border: 2px solid rgba(139, 115, 18, 0.89);
-  border-radius: 14px;
+	display: block;
+	background: rgba(46, 50, 58, 0.44);
+	padding: 5px;
+	margin: 15px;
+	border: 2px solid rgba(139, 115, 18, 0.89);
+	border-radius: 14px;
+	cursor: pointer;
+	background-position: 100% 0;
+	background-size: 300%;
+	background-image: linear-gradient(45deg, $bg-color 50%, transparent 50%);
+	transition: 0.8s;
+	font-size: 1.1rem;
+	&:hover {
+		background-position: 0 100%;
+		color: $header-color;
+		font-weight: 500;
+	}
 }
 
-.portfolio-links .fa {
-	font-size: 2em;
-	margin: 5px;
+.portfolio{
+	a {
+		background-image: linear-gradient(45deg, $half-black 50%, transparent 50%);
+	}
+	.portfolio-links .fa {
+		font-size: 2em;
+		margin: 5px;
+	 }
 }
 
 //CONTACT
@@ -324,20 +336,6 @@ footer::before {
   left: 0;
   right: 0;
   transform: rotate(-4deg);
-}
-
-.email-btn {
-	cursor: pointer;
-	background-position: 100% 0;
-	background-size: 300%;
-	background-image: linear-gradient(45deg, $bg-color 50%, transparent 50%);
-	transition: 0.8s;
-	font-size: 1.1rem;
-	&:hover {
-		background-position: 0 100%;
-		color: $header-color;
-		font-weight: 500;
-	}
 }
 
 .icon-btn {
@@ -382,19 +380,55 @@ footer div > div {
 
 //MEDIA QUERIES
 @media (max-width: 950px) {
-	.photo-nav {
-		display: none;
+	body {
+		font-size: 14px;
+	}
+
+	.slogan {
+		width: 80%;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.portfolio-group, .portfolio-links {
 		flex-direction: column;
+		display: block;
+	}
+
+	footer::before {
+		display: none;
 	}
 	
 	footer .flex {
-		flex-direction: column;	
+		flex-direction: column; //Not working on IE11
+		display: block; 
 	}
 
-	.layer a {
-    padding: 5% 10%;
+	.layer {
+		opacity: 1;
+		position: static;
+		background: inherit;
+		a {
+    		padding: 5% 10%;
+		}
+	}
+
+	.social {
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 550px) {
+	body {
+		font-size: 12px;
+	}
+	.nav-item {
+		display: none;
+	}
+	nav {
+		justify-content: center;
+	}
+	.email-btn {
+		font-size:0.8rem;
 	}
 }

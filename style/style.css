@@ -1,39 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100|Lato:100,300,400");
-.magic-btn [class^="btn"] {
-  display: inline-block;
-  margin: 4px 2px;
-  padding: 15px 30px;
-  min-width: 160px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: inherit;
-  border: 2px solid;
-  background-position: 100% 0;
-  background-size: 300%;
-  -webkit-transition: 0.6s;
-  transition: 0.6s; }
-
-.magic-btn [class^="btn"]:hover {
-  background-position: 0 100%;
-  color: white; }
-
-.btn-purple {
-  color: #8e44ad;
-  border-color: #8e44ad;
-  background-image: linear-gradient(90deg, #8e44ad 50%, transparent 50%); }
-
-.btn-yellow {
-  color: #f1c40f;
-  border-color: #f1c40f;
-  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%); }
-
-.btn-blue {
-  color: #3498db;
-  border-color: #3498db;
-  background-image: linear-gradient(135deg, #3498db 50%, transparent 50%); }
-
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400|Roboto:100");
 a {
   color: inherit;
   text-decoration: none; }
@@ -75,7 +40,8 @@ body {
   margin: 0 auto;
   font-family: 'Lato', 'Roboto', sans-serif;
   font-weight: 300;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 16px; }
 
 .container {
   max-width: 960px;
@@ -101,13 +67,11 @@ h2, h1 {
 h1 {
   font-weight: inherit; }
 
-h3 {
-  text-align: center; }
-
 main section h1 {
   font-family: Roboto;
   font-weight: 600;
   font-size: 2em;
+  padding: 20px 0;
   text-align: center;
   letter-spacing: 10px;
   position: relative;
@@ -118,7 +82,7 @@ main section h1 {
     width: 30%;
     height: 2px;
     background: silver;
-    bottom: -10px;
+    bottom: 0;
     right: 50%;
     transform: translateX(50%);
     transition: 1s; }
@@ -135,9 +99,6 @@ main section h1 {
 .portfolio-breaker {
   background: url(../img/lightbulb.jpg) 0/cover; }
 
-.contact-breaker {
-  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
-
 .section-breaker {
   background-attachment: fixed; }
 
@@ -147,8 +108,7 @@ header {
   width: 100%;
   padding: 5px 0;
   background: #222222;
-  background: linear-gradient(45deg, transparent, #222222, #353133);
-  transition: 1s; }
+  background: linear-gradient(45deg, transparent, #222222, #353133); }
   header nav {
     display: flex;
     justify-content: flex-start; }
@@ -165,9 +125,12 @@ header {
         list-style-type: none;
         text-transform: uppercase;
         font-size: 1.4em;
-        letter-spacing: 4px; }
+        letter-spacing: 2px;
+        transition: 1s; }
         header nav ul li:hover {
-          text-decoration: overline; }
+          text-decoration: overline;
+          letter-spacing: 4px;
+          color: #F7C712; }
 
 .header-fixed {
   background-color: #8e44ad;
@@ -175,9 +138,13 @@ header {
   font-size: 0.8em; }
   .header-fixed nav {
     justify-content: center; }
+    .header-fixed nav li {
+      padding: 5px 15px; }
 
 .photo-nav {
-  max-width: 50%; }
+  width: 150px;
+  min-height: 40px;
+  max-width: initial; }
 
 .welcome {
   height: 100vh;
@@ -186,8 +153,8 @@ header {
 
 .slogan {
   position: absolute;
-  left: 20%;
-  top: 40%;
+  left: 15%;
+  top: 30%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
   font-size: 1.2em;
@@ -196,12 +163,12 @@ header {
   .slogan h1 {
     background: none;
     color: white; }
-  .slogan .countdown {
+  .slogan .title {
     padding: 15px 25px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 18px 18px 0 0;
     color: rgba(53, 49, 51, 0.92); }
-    .slogan .countdown h1 {
+    .slogan .title h1 {
       color: #8e44ad;
       text-transform: uppercase; }
 
@@ -243,9 +210,21 @@ header {
   padding: 5px;
   margin: 15px;
   border: 2px solid rgba(139, 115, 18, 0.89);
-  border-radius: 14px; }
+  border-radius: 14px;
+  cursor: pointer;
+  background-position: 100% 0;
+  background-size: 300%;
+  background-image: linear-gradient(45deg, #0D3448 50%, transparent 50%);
+  transition: 0.8s;
+  font-size: 1.1rem; }
+  .btn:hover {
+    background-position: 0 100%;
+    color: #F7C712;
+    font-weight: 500; }
 
-.portfolio-links .fa {
+.portfolio a {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 50%, transparent 50%); }
+.portfolio .portfolio-links .fa {
   font-size: 2em;
   margin: 5px; }
 
@@ -271,18 +250,6 @@ footer::before {
   left: 0;
   right: 0;
   transform: rotate(-4deg); }
-
-.email-btn {
-  cursor: pointer;
-  background-position: 100% 0;
-  background-size: 300%;
-  background-image: linear-gradient(45deg, #0D3448 50%, transparent 50%);
-  transition: 0.8s;
-  font-size: 1.1rem; }
-  .email-btn:hover {
-    background-position: 0 100%;
-    color: #F7C712;
-    font-weight: 500; }
 
 .icon-btn {
   width: 50px;
@@ -315,16 +282,45 @@ footer div > div {
   transform: scale(1.05); }
 
 @media (max-width: 950px) {
-  .photo-nav {
-    display: none; }
+  body {
+    font-size: 14px; }
+
+  .slogan {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%); }
 
   .portfolio-group, .portfolio-links {
-    flex-direction: column; }
+    flex-direction: column;
+    display: block; }
+
+  footer::before {
+    display: none; }
 
   footer .flex, footer .flex-wrap, footer .flex-col {
-    flex-direction: column; }
+    flex-direction: column;
+    display: block; }
 
-  .layer a {
-    padding: 5% 10%; } }
+  .layer {
+    opacity: 1;
+    position: static;
+    background: inherit; }
+    .layer a {
+      padding: 5% 10%; }
+
+  .social {
+    margin-bottom: 15px; } }
+@media (max-width: 550px) {
+  body {
+    font-size: 12px; }
+
+  .nav-item {
+    display: none; }
+
+  nav {
+    justify-content: center; }
+
+  .email-btn {
+    font-size: 0.8rem; } }
 
 /*# sourceMappingURL=style.css.map */
