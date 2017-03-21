@@ -126,17 +126,14 @@ main section h1 {
 		}
 }
 
-.txt-center {
-	text-align: center;
-}
+.txt-center {text-align: center;}
 
-.hidden {
-	opacity: 0;
-}
+.hidden {opacity: 0;}
+
 //TODO: Tooltip after clicking on eventListener
 //SECTION BREAKERS
 .tech-breaker {
-	background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover;
+	background: url(../img/coding.jpg) 0/cover;
 }
 
 .portfolio-breaker {
@@ -379,9 +376,13 @@ footer div > div {
 }
 
 //MEDIA QUERIES
-@media (max-width: 950px) {
+@media (max-width: 850px) {
 	body {
 		font-size: 14px;
+	}
+
+	nav {
+		justify-content: flex-start;
 	}
 
 	.slogan {
@@ -393,6 +394,14 @@ footer div > div {
 	.portfolio-group, .portfolio-links {
 		flex-direction: column;
 		display: block;
+	}
+	
+	.section-breaker{
+		background-attachment: initial;
+	}
+
+	.portfolio-breaker {
+		background-size: contain;
 	}
 
 	footer::before {
@@ -418,17 +427,24 @@ footer div > div {
 	}
 }
 
-@media (max-width: 550px) {
-	body {
-		font-size: 12px;
+@media (max-width: 600px) {
+
+	.container {
+		width: 95%;
 	}
 	.nav-item {
 		display: none;
 	}
 	nav {
-		justify-content: center;
+		justify-content: flex-start;
 	}
 	.email-btn {
 		font-size:0.8rem;
+		margin: 0;
+		overflow: hidden;
+	}
+	.layer a {
+		margin: 1px;
+		width: 45%;
 	}
 }

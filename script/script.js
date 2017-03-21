@@ -10,14 +10,13 @@ function sizeUp() {
 function sizeDown() {
 	slogan.classList.remove('big');
 }
-function copySelected(idName) {
-    console.log(this);
+function copyEmail() {
 	emailHolder.select();
 	document.execCommand('copy');
 }
 
 slogan.addEventListener ('transitionend', sizeDown);
-emailBtn.addEventListener ('click', copySelected);
+emailBtn.addEventListener ('click', copyEmail);
 setInterval (sizeUp, 3000);
 
 

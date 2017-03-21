@@ -94,7 +94,7 @@ main section h1 {
   opacity: 0; }
 
 .tech-breaker {
-  background: url(https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg) 0/cover; }
+  background: url(../img/coding.jpg) 0/cover; }
 
 .portfolio-breaker {
   background: url(../img/lightbulb.jpg) 0/cover; }
@@ -281,9 +281,12 @@ footer div > div {
 .big {
   transform: scale(1.05); }
 
-@media (max-width: 950px) {
+@media (max-width: 850px) {
   body {
     font-size: 14px; }
+
+  nav {
+    justify-content: flex-start; }
 
   .slogan {
     width: 80%;
@@ -293,6 +296,12 @@ footer div > div {
   .portfolio-group, .portfolio-links {
     flex-direction: column;
     display: block; }
+
+  .section-breaker {
+    background-attachment: initial; }
+
+  .portfolio-breaker {
+    background-size: contain; }
 
   footer::before {
     display: none; }
@@ -310,17 +319,23 @@ footer div > div {
 
   .social {
     margin-bottom: 15px; } }
-@media (max-width: 550px) {
-  body {
-    font-size: 12px; }
+@media (max-width: 600px) {
+  .container {
+    width: 95%; }
 
   .nav-item {
     display: none; }
 
   nav {
-    justify-content: center; }
+    justify-content: flex-start; }
 
   .email-btn {
-    font-size: 0.8rem; } }
+    font-size: 0.8rem;
+    margin: 0;
+    overflow: hidden; }
+
+  .layer a {
+    margin: 1px;
+    width: 45%; } }
 
 /*# sourceMappingURL=style.css.map */
