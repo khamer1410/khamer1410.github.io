@@ -4,6 +4,9 @@ a {
   text-decoration: none; }
 
 * {
+  box-sizing: border-box; }
+
+* {
   outline: none; }
 
 button {
@@ -26,15 +29,6 @@ section, .container, .section-breaker {
 
 .col-2 {
   flex: 2; }
-
-.col-3 {
-  flex: 3; }
-
-.col-4 {
-  flex: 4; }
-
-* {
-  box-sizing: border-box; }
 
 body {
   margin: 0 auto;
@@ -231,9 +225,6 @@ header {
 .contact {
   padding-bottom: 15px; }
 
-.contact form {
-  display: none; }
-
 footer {
   position: relative;
   text-align: center;
@@ -301,7 +292,8 @@ footer div > div {
     background-attachment: initial; }
 
   .portfolio-breaker {
-    background-size: contain; }
+    background-size: cover;
+    background-position: 50%; }
 
   footer::before {
     display: none; }
