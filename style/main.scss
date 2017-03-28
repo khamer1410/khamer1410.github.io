@@ -268,7 +268,7 @@ header{
     	justify-content: center;
     	align-items: center;
 		text-transform: uppercase;
-   		font-family: 'Amatic SC', cursive;
+   		font-family: inherit, cursive;
     	text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
 	}
 	&.open {
