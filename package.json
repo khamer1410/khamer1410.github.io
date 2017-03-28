@@ -1,0 +1,32 @@
+{
+  "name": "krzysztof_hamerszmit",
+  "version": "1.0.0",
+  "description": "my personal portfolio webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khamer1410/khamer1410.github.io.git"
+  },
+  "keywords": [
+    "Krzysztof",
+    "Hamerszmit",
+    "portfolio",
+    "front-end"
+  ],
+  "author": "Krzysztof Hamerszmit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khamer1410/khamer1410.github.io/issues"
+  },
+  "homepage": "https://github.com/khamer1410/khamer1410.github.io#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}

@@ -1,36 +1,55 @@
 'use strict';
+//SLOGAN PULSE
+    const slogan = document.querySelector('.slogan');
 
-const slogan = document.querySelector('.slogan');
-const emailBtn = document.getElementById('email');
-const emailHolder = document.getElementById('mailholder');
+    function sizeUp() {
+        slogan.classList.add('big');
+    }
+    function sizeDown() {
+        slogan.classList.remove('big');
+    }
+    setInterval(sizeUp, 3000);
+    slogan.addEventListener('transitionend', sizeDown);
 
-function sizeUp() {
-	slogan.classList.add('big');
-}
-function sizeDown() {
-	slogan.classList.remove('big');
-}
-function copyEmail() {
-	emailHolder.select();
-	document.execCommand('copy');
-}
+//COPY E-MAIL ADRESS
+    const emailBtn = document.getElementById('email');
+    const emailHolder = document.getElementById('mailholder');
 
-slogan.addEventListener ('transitionend', sizeDown);
-emailBtn.addEventListener ('click', copyEmail);
-setInterval (sizeUp, 3000);
+    function copyEmail() {
+        emailHolder.select();
+        document.execCommand('copy');
+    }
+
+    emailBtn.addEventListener ('click', copyEmail);
+
+//GALLERY
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen() {
+        panels.forEach((el) => {
+            if (el != this) {
+                el.classList.remove('open');
+                el.classList.remove('open-active');
+            }
+        });
+        this.classList.toggle('open');
+        this.classList.toggle('open-active');
+    }
+
+    panels.forEach((panel) => panel.addEventListener('click', toggleOpen));
 
 
 //SCROLL
-window.onscroll = ()=> {scrollFunction()};
+    window.onscroll = ()=> {scrollFunction()};
 
-function scrollFunction() {
-	let header = document.getElementById("header");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        header.classList.add("header-fixed");
-    } else {
-        header.classList.remove("header-fixed");
+    function scrollFunction() {
+        let header = document.getElementById("header");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            header.classList.add("header-fixed");
+        } else {
+            header.classList.remove("header-fixed");
+        }
     }
-}
 
 
 // //WAYPOINTS - not used on page yet

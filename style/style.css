@@ -53,10 +53,11 @@ img {
   height: auto;
   display: block; }
 
-h2, h1 {
+h2, h1, h3 {
   display: block;
   width: 100%;
-  font-weight: 400; }
+  font-weight: 400;
+  text-align: center; }
 
 h1 {
   font-weight: inherit; }
@@ -65,21 +66,27 @@ main section h1 {
   font-family: Roboto;
   font-weight: 600;
   font-size: 2em;
-  padding: 20px 0;
+  padding: 35px 0;
   text-align: center;
   letter-spacing: 10px;
   position: relative;
-  color: #F7C712; }
+  color: #F7C712;
+  transition: 1s; }
   main section h1::after {
     content: '';
     position: absolute;
-    width: 30%;
+    width: 8%;
     height: 2px;
     background: silver;
     bottom: 0;
     right: 50%;
     transform: translateX(50%);
-    transition: 1s; }
+    transition: 1s cubic-bezier(0.61, -0.19, 0.7, -0.11); }
+
+main section:hover h1 {
+  letter-spacing: 5px; }
+  main section:hover h1::after {
+    width: 30%; }
 
 .txt-center {
   text-align: center; }
@@ -143,7 +150,8 @@ header {
 .welcome {
   height: 100vh;
   background: url("../img/night_sky.jpg") 0/cover;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .slogan {
   position: absolute;
@@ -165,6 +173,66 @@ header {
     .slogan .title h1 {
       color: #8e44ad;
       text-transform: uppercase; }
+
+.galery {
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 20px; }
+
+.panel {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  font-size: 2rem;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s; }
+  .panel > p {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45); }
+  .panel.open {
+    flex: 3;
+    font-size: 3rem; }
+
+.panel > *:first-child {
+  transform: translateY(-100%); }
+
+.panel.open-active > *:first-child {
+  font-size: 1.5rem;
+  transform: translateY(0); }
+
+.panel > *:last-child {
+  transform: translateY(100%); }
+
+.panel.open-active > *:last-child {
+  font-size: 1.5rem;
+  transform: translateY(0); }
+
+.panel1 {
+  background-image: url(https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/19121_932657773433655_7194965266843374418_n.jpg?oh=02ed2a4949c21559da8f1fcd82763af4&oe=596CA5A1); }
+
+.panel2 {
+  background-image: url("../img/gitara.jpg"); }
+
+.panel3 {
+  background-image: url(https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/12832291_1707733569466841_2417337955013122682_n.jpg?oh=2d7a6e7739fb2f66b671c419d59c8fb4&oe=599AFEC8); }
 
 .portfolio-ex {
   margin: 10px; }
@@ -218,12 +286,13 @@ header {
 
 .portfolio a {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 50%, transparent 50%); }
+
 .portfolio .portfolio-links .fa {
   font-size: 2em;
   margin: 5px; }
 
 .contact {
-  padding-bottom: 15px; }
+  padding-bottom: 50px; }
 
 footer {
   position: relative;
@@ -257,6 +326,7 @@ footer::before {
 
 .icon-btn .fa-linkedin {
   color: #0077B5; }
+
 .icon-btn .fa-codepen {
   color: #ebc203; }
 
@@ -275,57 +345,45 @@ footer div > div {
 @media (max-width: 850px) {
   body {
     font-size: 14px; }
-
   nav {
     justify-content: flex-start; }
-
   .slogan {
     width: 80%;
     left: 50%;
     transform: translateX(-50%); }
-
   .portfolio-group, .portfolio-links {
     flex-direction: column;
     display: block; }
-
   .section-breaker {
     background-attachment: initial; }
-
   .portfolio-breaker {
     background-size: cover;
     background-position: 50%; }
-
   footer::before {
     display: none; }
-
   footer .flex, footer .flex-wrap, footer .flex-col {
     flex-direction: column;
     display: block; }
-
   .layer {
     opacity: 1;
     position: static;
     background: inherit; }
     .layer a {
       padding: 5% 10%; }
-
   .social {
     margin-bottom: 15px; } }
+
 @media (max-width: 600px) {
   .container {
     width: 95%; }
-
   .nav-item {
     display: none; }
-
   nav {
     justify-content: flex-start; }
-
   .email-btn {
     font-size: 0.8rem;
     margin: 0;
     overflow: hidden; }
-
   .layer a {
     margin: 1px;
     width: 45%; } }
