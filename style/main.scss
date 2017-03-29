@@ -410,8 +410,8 @@ footer::before {
 	}
 }
 
-footer div > div {
-	z-index: 2;
+footer div > div { 
+	z-index: 2;/*for not being coverd by ::before bar*/
 }
 
 .footer-bottom {
@@ -461,7 +461,7 @@ footer div > div {
 	}
 	
 	footer .flex {
-		flex-direction: column; //Not working on IE11
+		flex-direction: column; //Not working on IE11!
 		display: block; 
 	}
 
