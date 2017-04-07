@@ -1,5 +1,6 @@
 module.exports = function (grunt) {
-
+    require('load-grunt-tasks')(grunt);
+    
     // Project configuration.
     grunt.initConfig({
         sass: {
@@ -21,6 +22,16 @@ module.exports = function (grunt) {
                     'style/style.css': 'style/style.css'
                 }
             },
+        },
+        'babel': {
+            options: {
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                    "script/script.js": "scripts/app.js"
+                }
+            }
         },
         imagemin: {
             dynamic: {
@@ -56,11 +67,13 @@ module.exports = function (grunt) {
     // Load the plugins tasks 
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'autoprefixer', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['sass', 'autoprefixer','babel', 'imagemin', 'watch']);
     grunt.registerTask('sync', ['browserSync']);
+    grunt.registerTask('babel', ['babel']);
 };

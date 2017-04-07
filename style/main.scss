@@ -1,5 +1,6 @@
 //IMPORT & VARIABLES
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400|Roboto:100');
+@import 'loader';
 
 $container-width: 960px;
 
@@ -20,7 +21,7 @@ a {
 
 button {
 	border: none;
-}
+} 
 
 //4WORK ONLY
 section, .container, .section-breaker {
@@ -145,6 +146,7 @@ main section:hover {
 }
 
 //CUSTOM STYLES
+
 //HEADER
 	//TODO: get default menu styles into external file. Load them with @import.
 header{
