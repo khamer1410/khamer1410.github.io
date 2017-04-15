@@ -73,7 +73,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'autoprefixer','babel', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['sass', 'autoprefixer', 'imagemin', 'watch']);
     grunt.registerTask('sync', ['browserSync']);
     grunt.registerTask('babel', ['babel']);
 };

@@ -1,15 +1,4 @@
 'use strict';
-//SLOGAN PULSE
-    const slogan = document.querySelector('.slogan');
-
-    function sizeUp() {
-        slogan.classList.add('big');
-    }
-    function sizeDown() {
-        slogan.classList.remove('big');
-    }
-    setInterval(sizeUp, 3000);
-    slogan.addEventListener('transitionend', sizeDown);
 
 //COPY E-MAIL ADRESS
     const emailBtn = document.getElementById('email');
@@ -37,8 +26,7 @@
     }
 
     panels.forEach((panel) => panel.addEventListener('click', toggleOpen));
-
-
+    
 //SCROLL
     window.onscroll = ()=> {scrollFunction()};
 
@@ -50,6 +38,13 @@
             header.classList.remove("header-fixed");
         }
     }
+
+    $(document).on('click', 'a', function (event) {
+        event.preventDefault();
+        $('body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 800);
+    });
 
 //LOADER
     function hideLoader() {
@@ -71,9 +66,4 @@
 // 		console.log('hej');
 // 	}
 // })
-
-// document.addEventListener('DOMContentLoaded', ()=> 
-// 	{ console.log('ready2');
-// });
-
 

@@ -218,7 +218,8 @@ header {
   border-radius: 18px;
   font-size: 1.2em;
   text-align: center;
-  transition: 1s; }
+  transition: 1s;
+  animation: pulse 2s infinite; }
   .slogan h1 {
     background: none;
     color: white; }
@@ -231,6 +232,13 @@ header {
       color: #8e44ad;
       text-transform: uppercase; }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
 .galery {
   display: flex;
   overflow: hidden;
@@ -395,9 +403,6 @@ footer div > div {
   color: white;
   padding: 10px; }
 
-.big {
-  transform: scale(1.05); }
-
 @media (max-width: 850px) {
   body {
     font-size: 14px; }
@@ -408,7 +413,8 @@ footer div > div {
   .slogan {
     width: 80%;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    animation: none; }
 
   .portfolio-group, .portfolio-links {
     flex-direction: column;

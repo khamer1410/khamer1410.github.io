@@ -219,6 +219,7 @@ header{
 	font-size: 1.2em;
 	text-align: center;
 	transition: 1s;
+	animation: pulse 2s infinite;
 	h1 {
 		background: none;
 		color: white;
@@ -232,6 +233,18 @@ header{
 			color: #8e44ad;
 			text-transform: uppercase;
 		}
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
 	}
 }
 
@@ -423,11 +436,6 @@ footer div > div {
 	padding: 10px;
 }
 
-//FOR JS
-.big {
-	transform: scale(1.05);
-}
-
 //MEDIA QUERIES
 @media (max-width: 850px) {
 	body {
@@ -442,6 +450,7 @@ footer div > div {
 		width: 80%;
 		left: 50%;
 		transform: translateX(-50%);
+		animation: none;
 	}
 
 	.portfolio-group, .portfolio-links {
