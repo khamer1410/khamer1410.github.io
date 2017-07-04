@@ -42,8 +42,8 @@
     let LinkRegExp = /^#/;
 
     $(document).on('click', 'a', function (event) {
-        const clickedLink = event.target;
-        if ( LinkRegExp.test(clickedLink.getAttribute('href')) || LinkRegExp.test(clickedLink.parent.getAttribute('href')) ) {
+        const clickedLink = event.currentTarget;
+        if ( LinkRegExp.test(clickedLink.getAttribute('href'))) {
             event.preventDefault();
             $('body').animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
