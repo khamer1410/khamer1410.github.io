@@ -39,25 +39,31 @@
         }
     }
 
+    let LinkRegExp = /^#/;
+
     $(document).on('click', 'a', function (event) {
-        event.preventDefault();
-        $('body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 800);
+        const clickedLink = event.target;
+        if ( LinkRegExp.test(clickedLink.getAttribute('href')) || LinkRegExp.test(clickedLink.parent.getAttribute('href')) ) {
+            event.preventDefault();
+            $('body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 800);
+        }
     });
 
+
 //LOADER
+    window.addEventListener('load', ()=> {
+        hideLoader();
+    });
+
     function hideLoader() {
         let loader = document.querySelector('.loader');
         loader.style.opacity = '0';
         loader.addEventListener('transitionend',()=> {
             loader.style.display = 'none';
-        })
+        });
     }
-
-    document.addEventListener('DOMContentLoaded', ()=> {
-        setTimeout(hideLoader, 2000);
-    });
 
 // //WAYPOINTS - not used on page yet
 // var waypoint1 = new Waypoint({
