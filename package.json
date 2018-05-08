@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "my personal portfolio webpage",
   "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
+  "scripts": {"start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777"},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/khamer1410/khamer1410.github.io.git"
@@ -23,6 +21,7 @@
   },
   "homepage": "https://github.com/khamer1410/khamer1410.github.io#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.13",
     "babel-preset-es2015": "^6.24.0",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
