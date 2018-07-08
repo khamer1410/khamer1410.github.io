@@ -11,7 +11,7 @@
   align-items: center;
   filter: hue-rotate(0deg);
   animation: hue 10000ms infinite linear;
-  transition: 3s; }
+  transition: 2s; }
 
 .loader .b1 {
   left: 42%; }
@@ -291,13 +291,16 @@ header {
   transform: translateY(0); }
 
 .panel1 {
-  background-image: url(https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/19121_932657773433655_7194965266843374418_n.jpg?oh=02ed2a4949c21559da8f1fcd82763af4&oe=596CA5A1); }
+  background-image: url("../img/snb.jpg");
+}
 
 .panel2 {
-  background-image: url("../img/gitara.jpg"); }
+  background-image: url("../img/gitara.jpg");
+}
 
 .panel3 {
-  background-image: url(https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/12832291_1707733569466841_2417337955013122682_n.jpg?oh=2d7a6e7739fb2f66b671c419d59c8fb4&oe=599AFEC8); }
+  background-image: url("../img/lindy.jpg");
+}
 
 .portfolio-ex {
   margin: 10px; }
@@ -454,6 +457,8 @@ footer div > div {
     justify-content: flex-start; }
 
   .email-btn {
+    display: flex;
+    justify-content: center;
     font-size: 0.8rem;
     margin: 0;
     overflow: hidden; }
