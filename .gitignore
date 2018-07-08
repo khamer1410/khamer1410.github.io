@@ -2,6 +2,7 @@
 style/.sass-cache
 style/_btn.scss
 style/*.map
+.sass-cache
 
 #Task Runner
 node_modules
