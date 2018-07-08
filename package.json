@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "my personal portfolio webpage",
   "main": "index.js",
-  "scripts": {"start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777"},
+  "scripts": {
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/khamer1410/khamer1410.github.io.git"

@@ -9,7 +9,14 @@
         document.execCommand('copy');
     }
 
-    emailBtn.addEventListener ('click', copyEmail);
+    function sendEmail(e) {
+        const emailAdress = e.currentTarget.dataset.email;
+        emailAdress 
+        ? window.open(`mailto:${emailAdress}`)
+        : copyEmail();
+    }
+
+    emailBtn.addEventListener ('click', sendEmail);
 
 //GALLERY
     const panels = document.querySelectorAll('.panel');
