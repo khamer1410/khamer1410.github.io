@@ -35,9 +35,9 @@
     panels.forEach((panel) => panel.addEventListener('click', toggleOpen));
     
 //SCROLL
-    window.onscroll = ()=> {scrollFunction()};
+    window.onscroll = ()=> {toggleHeaderPosition()};
 
-    function scrollFunction() {
+    function toggleHeaderPosition() {
         let header = document.getElementById("header");
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             header.classList.add("header-fixed");
@@ -45,18 +45,6 @@
             header.classList.remove("header-fixed");
         }
     }
-
-    let LinkRegExp = /^#/;
-
-    $(document).on('click', 'a', function (event) {
-        const clickedLink = event.currentTarget;
-        if ( LinkRegExp.test(clickedLink.getAttribute('href'))) {
-            event.preventDefault();
-            $('body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top
-            }, 800);
-        }
-    });
 
 
 //LOADER
@@ -71,12 +59,4 @@
             loader.style.display = 'none';
         });
     }
-
-// //WAYPOINTS - not used on page yet
-// var waypoint1 = new Waypoint({
-// 	element: document.getElementById('technologies'),
-// 	handler: function() {
-// 		console.log('hej');
-// 	}
-// })
 
